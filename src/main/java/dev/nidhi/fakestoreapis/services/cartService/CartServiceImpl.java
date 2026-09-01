@@ -5,6 +5,10 @@ import dev.nidhi.fakestoreapis.models.Cart;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @Service
 public class CartServiceImpl implements CartService{
 
@@ -23,5 +27,19 @@ public class CartServiceImpl implements CartService{
         );
         assert cartDTO != null;
         return cartDTO.toCart();
+    }
+
+    @Override
+    public List<Cart> getAllCarts() {
+
+        CartDTO[] cartDTOList = restTemplate.getForObject(
+                "https://fakestoreapi.com/carts",
+                CartDTO[].class
+        );
+        List<Cart> cartList = Arrays.stream(cartDTOList)
+                .map(cartDTO -> cartDTO.toCart())
+                .toList();
+
+        return cartList;
     }
 }

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class CartController {
 
@@ -20,5 +22,15 @@ public class CartController {
     public CartDTO getCartByID(@PathVariable("id") int cartId){
         Cart cart = cartService.getCartByID(cartId);
         return CartDTO.fromCart(cart);
+    }
+
+    @GetMapping("/carts")
+    public List<CartDTO> getAllCarts() {
+        List<Cart> carts = cartService.getAllCarts();
+        List<CartDTO> cartDTOs = carts
+                                .stream()
+                                .map(cart -> CartDTO.fromCart(cart))
+                                .toList();
+        return cartDTOs;
     }
 }
