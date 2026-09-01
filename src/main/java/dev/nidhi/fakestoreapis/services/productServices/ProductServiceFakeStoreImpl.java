@@ -1,21 +1,19 @@
-package dev.nidhi.fakestoreapis.services;
+package dev.nidhi.fakestoreapis.services.productServices;
 
-import dev.nidhi.fakestoreapis.dtos.FakeStoreCreateProductRequestDTO;
-import dev.nidhi.fakestoreapis.dtos.FakeStoreCreateProductResponseDTO;
-import dev.nidhi.fakestoreapis.dtos.FakeStoreProductDTO;
+import dev.nidhi.fakestoreapis.dtos.productDTO.FakeStoreCreateProductRequestDTO;
+import dev.nidhi.fakestoreapis.dtos.productDTO.FakeStoreCreateProductResponseDTO;
+import dev.nidhi.fakestoreapis.dtos.productDTO.FakeStoreProductDTO;
 import dev.nidhi.fakestoreapis.models.Product;
-import org.apache.tomcat.util.http.parser.HttpParser;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.net.http.HttpResponse;
 import java.util.*;
 
 @Service("productServiceFakeStoreImpl")
-public class ProductServiceFakeStoreImpl implements ProductService{
+public class ProductServiceFakeStoreImpl implements ProductService {
 
     private final RestTemplate restTemplate;
 

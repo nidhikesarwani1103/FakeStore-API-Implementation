@@ -1,6 +1,5 @@
 package dev.nidhi.fakestoreapis.models;
 
-import dev.nidhi.fakestoreapis.dtos.CreateProductResponseDTO;
 import lombok.Getter;
 import lombok.Setter;
 

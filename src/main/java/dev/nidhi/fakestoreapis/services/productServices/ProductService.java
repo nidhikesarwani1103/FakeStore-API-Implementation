@@ -1,10 +1,8 @@
-package dev.nidhi.fakestoreapis.services;
+package dev.nidhi.fakestoreapis.services.productServices;
 
 import dev.nidhi.fakestoreapis.models.Product;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 
 public interface ProductService {

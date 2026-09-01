@@ -1,4 +1,4 @@
-package dev.nidhi.fakestoreapis.dtos;
+package dev.nidhi.fakestoreapis.dtos.productDTO;
 
 import dev.nidhi.fakestoreapis.models.Product;
 import lombok.Getter;

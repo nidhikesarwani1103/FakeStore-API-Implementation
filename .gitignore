@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Java crash logs
+hs_err_pid*.log
+
+# SSH keys
+id_ed25519*
+id_rsa*

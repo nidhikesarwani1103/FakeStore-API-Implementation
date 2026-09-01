@@ -1,16 +1,14 @@
 package dev.nidhi.fakestoreapis.controllers;
 
-import dev.nidhi.fakestoreapis.dtos.CreateProductRequestDTO;
-import dev.nidhi.fakestoreapis.dtos.CreateProductResponseDTO;
-import dev.nidhi.fakestoreapis.dtos.ErrorResponseDTO;
-import dev.nidhi.fakestoreapis.dtos.FakeStoreProductDTO;
+import dev.nidhi.fakestoreapis.dtos.productDTO.CreateProductRequestDTO;
+import dev.nidhi.fakestoreapis.dtos.productDTO.CreateProductResponseDTO;
+import dev.nidhi.fakestoreapis.dtos.productDTO.FakeStoreProductDTO;
 import dev.nidhi.fakestoreapis.models.Product;
-import dev.nidhi.fakestoreapis.services.ProductService;
+import dev.nidhi.fakestoreapis.services.productServices.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 
 @RestController

@@ -1,4 +1,4 @@
-package dev.nidhi.fakestoreapis.services;
+package dev.nidhi.fakestoreapis.services.productServices;
 
 import dev.nidhi.fakestoreapis.models.Product;
 import org.springframework.http.ResponseEntity;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service("dbProductService")
-public class ProductsServiceDBImpl implements ProductService{
+public class ProductsServiceDBImpl implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
