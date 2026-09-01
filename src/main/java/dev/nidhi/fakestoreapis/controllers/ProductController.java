@@ -63,17 +63,4 @@ public class ProductController {
         }
     }
 
-    @ExceptionHandler(Exception.class)
-    public String handleException(Exception e) {
-        return "Error: " + e.getMessage();
-    }
-
-    @ExceptionHandler(RuntimeException.class)
-    public ErrorResponseDTO handleRuntimeException(RuntimeException e){
-        ErrorResponseDTO errorResponseDTO = new ErrorResponseDTO();
-        errorResponseDTO.setMessage(e.getMessage());
-        errorResponseDTO.setStatus("500");
-        return errorResponseDTO;
-    }
-
 }
