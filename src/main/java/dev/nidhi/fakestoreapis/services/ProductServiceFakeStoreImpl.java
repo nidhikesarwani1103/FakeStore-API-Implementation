@@ -38,19 +38,26 @@ public class ProductServiceFakeStoreImpl implements ProductService{
         return responseDTO.toProduct();
     }
 
-    @Override
-    public List<Product> getAllProducts() {
-        FakeStoreProductDTO[] productDTOList = restTemplate.getForObject(
-                "https://fakestoreapi.com/products",
-                FakeStoreProductDTO[].class
-        );
+//    @Override
+//    public List<Product> getAllProducts() {
+//        FakeStoreProductDTO[] productDTOList = restTemplate.getForObject(
+//                "https://fakestoreapi.com/products",
+//                FakeStoreProductDTO[].class
+//        );
+//
+//        List<Product> productList  =
+//                Arrays.stream(productDTOList)
+//                .map(FakeStoreProductDTO::toProduct)
+//                .toList();
+//        return productList;
+//    }
 
-        List<Product> productList  =
-                Arrays.stream(productDTOList)
-                .map(FakeStoreProductDTO::toProduct)
-                .toList();
-        return productList;
-    }
+    // To test the Exception handling, we can throw an exception here
+    // and see if the global exception handler is working or not
+        @Override
+        public List<Product> getAllProducts() {
+            throw new RuntimeException("Not Implemented Yet");
+        }
 
     @Override
     public Product getProductById(int productId) {

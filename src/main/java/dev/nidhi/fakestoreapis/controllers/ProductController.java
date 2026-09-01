@@ -2,6 +2,7 @@ package dev.nidhi.fakestoreapis.controllers;
 
 import dev.nidhi.fakestoreapis.dtos.CreateProductRequestDTO;
 import dev.nidhi.fakestoreapis.dtos.CreateProductResponseDTO;
+import dev.nidhi.fakestoreapis.dtos.ErrorResponseDTO;
 import dev.nidhi.fakestoreapis.dtos.FakeStoreProductDTO;
 import dev.nidhi.fakestoreapis.models.Product;
 import dev.nidhi.fakestoreapis.services.ProductService;
@@ -20,7 +21,7 @@ public class ProductController {
     public ProductController(@Qualifier("productServiceFakeStoreImpl") ProductService productService){
         this.productService = productService;
     }
-    @GetMapping("/products/")
+    @GetMapping("/products")
     public List<FakeStoreProductDTO> getAllProducts(){
         List<Product> productList = productService.getAllProducts();
         List<FakeStoreProductDTO> productDTOList =
@@ -30,7 +31,7 @@ public class ProductController {
         return productDTOList;
     }
 
-    @PostMapping("/products/")
+    @PostMapping("/products")
     public CreateProductResponseDTO createProduct(@RequestBody CreateProductRequestDTO createProductRequestDTO){
       // return "Product created with title: "+createProductRequestDTO.getTitle();
         Product product = productService.createProduct(createProductRequestDTO.toProduct());
@@ -62,5 +63,17 @@ public class ProductController {
         }
     }
 
+    @ExceptionHandler(Exception.class)
+    public String handleException(Exception e) {
+        return "Error: " + e.getMessage();
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ErrorResponseDTO handleRuntimeException(RuntimeException e){
+        ErrorResponseDTO errorResponseDTO = new ErrorResponseDTO();
+        errorResponseDTO.setMessage(e.getMessage());
+        errorResponseDTO.setStatus("500");
+        return errorResponseDTO;
+    }
 
 }
