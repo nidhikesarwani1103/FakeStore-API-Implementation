@@ -12,6 +12,4 @@ public class Product {
     private float price;
     private String imageUrl;
     private String category;
-
-
 }
