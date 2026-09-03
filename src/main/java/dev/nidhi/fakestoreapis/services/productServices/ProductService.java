@@ -1,6 +1,6 @@
 package dev.nidhi.fakestoreapis.services.productServices;
 
-import dev.nidhi.fakestoreapis.models.Product;
+import dev.nidhi.fakestoreapis.models.FakeStore.Product;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

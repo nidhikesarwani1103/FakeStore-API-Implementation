@@ -1,4 +1,4 @@
-package dev.nidhi.fakestoreapis.models;
+package dev.nidhi.fakestoreapis.models.FakeStore;
 
 import lombok.Data;
 

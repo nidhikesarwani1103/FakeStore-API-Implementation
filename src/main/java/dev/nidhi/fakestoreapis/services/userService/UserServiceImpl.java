@@ -1,11 +1,9 @@
 package dev.nidhi.fakestoreapis.services.userService;
 
 import dev.nidhi.fakestoreapis.dtos.userDTO.UserDTO;
-import dev.nidhi.fakestoreapis.models.User;
+import dev.nidhi.fakestoreapis.models.FakeStore.User;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService{

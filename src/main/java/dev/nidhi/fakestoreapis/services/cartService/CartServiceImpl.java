@@ -1,11 +1,10 @@
 package dev.nidhi.fakestoreapis.services.cartService;
 
 import dev.nidhi.fakestoreapis.dtos.cartDTO.CartDTO;
-import dev.nidhi.fakestoreapis.models.Cart;
+import dev.nidhi.fakestoreapis.models.FakeStore.Cart;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

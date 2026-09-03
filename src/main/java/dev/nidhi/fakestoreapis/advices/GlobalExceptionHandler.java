@@ -3,9 +3,10 @@ package dev.nidhi.fakestoreapis.advices;
 import dev.nidhi.fakestoreapis.dtos.ErrorResponseDTO;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@ControllerAdvice
-public class ExceptionAdvice {
+@RestControllerAdvice
+public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public String handleException(Exception e) {

@@ -1,9 +1,8 @@
 package dev.nidhi.fakestoreapis.controllers;
 
 import dev.nidhi.fakestoreapis.dtos.userDTO.UserDTO;
-import dev.nidhi.fakestoreapis.models.User;
+import dev.nidhi.fakestoreapis.models.FakeStore.User;
 import dev.nidhi.fakestoreapis.services.userService.UserService;
-import lombok.Getter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

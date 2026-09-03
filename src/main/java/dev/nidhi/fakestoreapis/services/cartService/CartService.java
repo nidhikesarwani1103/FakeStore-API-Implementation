@@ -1,7 +1,6 @@
 package dev.nidhi.fakestoreapis.services.cartService;
 
-import dev.nidhi.fakestoreapis.dtos.cartDTO.CartDTO;
-import dev.nidhi.fakestoreapis.models.Cart;
+import dev.nidhi.fakestoreapis.models.FakeStore.Cart;
 
 import java.util.List;
 

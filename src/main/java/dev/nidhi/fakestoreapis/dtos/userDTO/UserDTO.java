@@ -1,6 +1,6 @@
 package dev.nidhi.fakestoreapis.dtos.userDTO;
 
-import dev.nidhi.fakestoreapis.models.User;
+import dev.nidhi.fakestoreapis.models.FakeStore.User;
 import lombok.Data;
 
 @Data

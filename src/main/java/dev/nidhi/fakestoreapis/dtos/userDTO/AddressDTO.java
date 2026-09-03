@@ -1,9 +1,7 @@
 package dev.nidhi.fakestoreapis.dtos.userDTO;
 
-import dev.nidhi.fakestoreapis.models.Address;
+import dev.nidhi.fakestoreapis.models.FakeStore.Address;
 import lombok.Data;
-
-import javax.print.DocFlavor;
 
 @Data
 public class AddressDTO {

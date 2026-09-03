@@ -1,7 +1,7 @@
 package dev.nidhi.fakestoreapis.dtos.userDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import dev.nidhi.fakestoreapis.models.Geolocation;
+import dev.nidhi.fakestoreapis.models.FakeStore.Geolocation;
 import lombok.Data;
 
 @Data

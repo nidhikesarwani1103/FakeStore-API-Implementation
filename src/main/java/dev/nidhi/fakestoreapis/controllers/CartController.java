@@ -1,7 +1,7 @@
 package dev.nidhi.fakestoreapis.controllers;
 
 import dev.nidhi.fakestoreapis.dtos.cartDTO.CartDTO;
-import dev.nidhi.fakestoreapis.models.Cart;
+import dev.nidhi.fakestoreapis.models.FakeStore.Cart;
 import dev.nidhi.fakestoreapis.services.cartService.CartService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

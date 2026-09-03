@@ -3,7 +3,7 @@ package dev.nidhi.fakestoreapis.services.productServices;
 import dev.nidhi.fakestoreapis.dtos.productDTO.FakeStoreCreateProductRequestDTO;
 import dev.nidhi.fakestoreapis.dtos.productDTO.FakeStoreCreateProductResponseDTO;
 import dev.nidhi.fakestoreapis.dtos.productDTO.FakeStoreProductDTO;
-import dev.nidhi.fakestoreapis.models.Product;
+import dev.nidhi.fakestoreapis.models.FakeStore.Product;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;

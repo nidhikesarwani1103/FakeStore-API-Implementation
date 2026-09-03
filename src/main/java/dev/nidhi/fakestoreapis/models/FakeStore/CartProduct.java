@@ -1,6 +1,5 @@
-package dev.nidhi.fakestoreapis.models;
+package dev.nidhi.fakestoreapis.models.FakeStore;
 
-import dev.nidhi.fakestoreapis.dtos.cartDTO.CartProductDTO;
 import lombok.Getter;
 import lombok.Setter;
 
